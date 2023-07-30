@@ -35,3 +35,9 @@ input:checked + span{
     border-radius: 50px;
     font-size: 40px;
 } 
+
+.main {
+    min-height: 527px;
+}
+
+
