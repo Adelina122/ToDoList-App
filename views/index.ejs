@@ -6,7 +6,7 @@
 
 <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
     <div class="list-group">
-        <label class="list-group-item d-flex gap-3">
+        <label class="list-group-item d-flex gap-3" style="background-color: #ACFADF;">
             <h1 class="heading"><%= day %>,
                 <%= date %>
                 <%= month %>
@@ -16,7 +16,7 @@
         <label class="list-group-item d-flex gap-3">
             <form action="/submitMain" method="post">
                 <input class="head" type="text" value="" style="font-size: 1.375em;" name="todayList" placeholder="Add new Task">
-                    <button class="btn btn-primary rounded-circle p-2 lh-1 my-btn" type="submit" width="16" height="16">+
+                    <button class="btn btn-primary rounded-circle p-2 lh-1 my-btn" type="submit" width="16" height="16" >+
                     </button>
                 </span>
             </form>
@@ -27,7 +27,7 @@
             <label class="list-group-item d-flex gap-3">
                 <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
                     <span class="pt-1 form-checked-content">
-                        <strong><%= task %></strong>
+                        <strong class="task"><%= task %></strong>
                     </span>
                 </label>
             <% }); %>

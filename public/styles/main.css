@@ -1,21 +1,18 @@
-input:checked+span {
-    color: #A0A0A0;
+
+body {
+    background-image: linear-gradient(#461959, #7A316F, #CD6688) !important;
 }
 
-.pad {
-    box-shadow: 5px 5px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    background-color: #F1F6F9;
-    border-radius: 20px;
-    min-width: 300px;
-    width: 80%;
-    max-width: 400px;
-    min-height: 600px;
-    border: 4px solid;
-    overflow: hidden;
+a.menu {
+    color: #fff !important;
+}
+
+a.menu2 {
+    color: #ACFADF !important;
+}
+
+input:checked+span {
+    color: #A0A0A0;
 }
 
 h1.heading {
@@ -30,11 +27,28 @@ input.head {
     /* padding: 3px 2rem 3px; */
 }
 
+.task {
+    font-family: cursive;
+}
+
 .my-btn {
     width: 35px;
     height: 35px;
+    color: #000 !important;
+    background-color: #ACFADF !important;
+    border-color: aquamarine !important;
+}
+
+.form-check-input:checked {
+    background-color: #ACFADF !important;
+    border-color: aquamarine !important;
 }
 
 .main {
     min-height: 527px;
+}
+
+p > a {
+    text-decoration: none;
+    color: #000;
 }
