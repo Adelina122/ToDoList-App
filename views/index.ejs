@@ -1,9 +1,33 @@
 <%- include("partials/header.ejs") %>
 
-<h1>Today -
-    <%= day %>,
-    <%= date %>
-    <%= month %>
-</h1>
+<div class="container">
+    <h1>Today -
+        <%= day %>,
+        <%= date %>
+        <%= month %>
+    </h1>
+</div>
 
-<%- include("partials/footer.ejs") %>
+<div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+    <div class="list-group">
+        <label class="list-group-item d-flex gap-3 heading">
+            <form action="/" method="post">
+                <input class="" type="text" value="" style="font-size: 1.375em;" name="todayList" placeholder="Add new Task">
+                    <button class="btn btn-primary rounded-circle p-2 lh-1 my-btn" type="submit" width="16" height="16">+
+                    </button>
+                </span>
+            </form>
+        </label>
+
+        <% taskList.forEach(task => { %>
+            <label class="list-group-item d-flex gap-3">
+                <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
+                    <span class="pt-1 form-checked-content">
+                        <strong><%= task %></strong>
+                    </span>
+                </label>
+            <% }); %>
+        </div>
+    </div>
+
+    <%- include("partials/footer.ejs") %>

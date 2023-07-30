@@ -4,6 +4,9 @@ import bodyParser from "body-parser";
 const app = express();
 const port = 3000;
 
+const dailyTask = [];
+const workTask = [];
+
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -16,6 +19,23 @@ app.get("/", (req, res) => {
         date: currentDate,
         month: monthNames[currentMonth],
     });
+});
+
+app.post("/", (req, res) => {
+    var currentDay = new Date().getDay();
+    var currentDate = new Date().getDate();
+    var currentMonth = new Date().getMonth();
+
+    var newTask = req.body["todayList"];
+    dailyTask.push(newTask);
+    console.log(newTask, dailyTask);
+
+    res.render("./index.ejs", {
+    day: dayNames[currentDay],
+    date: currentDate,
+    month: monthNames[currentMonth],
+    taskList: dailyTask,
+});
 });
 
 app.get("/work", (req, res) => {
