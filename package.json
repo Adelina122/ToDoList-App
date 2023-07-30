@@ -1,0 +1,20 @@
+{
+  "name": "todolist-app",
+  "version": "1.0.0",
+  "description": "The goal of this project is to create a ToDo List web application using Node.js, Express.js, and EJS. The application will allow users to create and view tasks. Tasks will not persist between sessions as no database will be used in this version of the application. Styling will be an important aspect of this project to ensure a good user experience.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adelina122/ToDoList-App.git#main"
+  },
+  "author": "Adelina122",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adelina122/ToDoList-App/issues"
+  },
+  "homepage": "https://github.com/Adelina122/ToDoList-App/tree/main#readme"
+}
