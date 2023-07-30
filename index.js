@@ -6,6 +6,7 @@ const port = 3000;
 
 const dailyTask = [];
 const workTask = [];
+var newTask = "";
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,17 +19,18 @@ app.get("/", (req, res) => {
         day: dayNames[currentDay],
         date: currentDate,
         month: monthNames[currentMonth],
+        taskList: dailyTask,
     });
 });
 
-app.post("/", (req, res) => {
+app.post("/submitMain", (req, res) => {
     var currentDay = new Date().getDay();
     var currentDate = new Date().getDate();
     var currentMonth = new Date().getMonth();
 
-    var newTask = req.body["todayList"];
+    newTask = req.body["todayList"];
     dailyTask.push(newTask);
-    console.log(newTask, dailyTask);
+    // console.log(newTask, dailyTask);
 
     res.render("./index.ejs", {
     day: dayNames[currentDay],

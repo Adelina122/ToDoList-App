@@ -1,4 +1,4 @@
-input:checked + span{
+input:checked+span {
     color: #A0A0A0;
 }
 
@@ -18,26 +18,23 @@ input:checked + span{
     overflow: hidden;
 }
 
-.heading {
-    background-color: #394867;
-    width: 100%;
-    height: 4rem;
-    text-align: center;
-    border-bottom: 5px solid black;
+h1.heading {
+    font-size: 30px;
+    margin: 5px 6rem 5px;
+}
 
+input.head {
+    border: none;
+    width: 22rem;
+    font-size: 1.125rem !important;
+    /* padding: 3px 2rem 3px; */
 }
 
 .my-btn {
-    color: white !important;
-    background-color: #212A3E;
-    border: 3px solid black;
-    padding: 0px 15px;
-    border-radius: 50px;
-    font-size: 40px;
-} 
+    width: 35px;
+    height: 35px;
+}
 
 .main {
     min-height: 527px;
 }
-
-
