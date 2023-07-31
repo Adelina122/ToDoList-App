@@ -18,3 +18,6 @@ The goal of this project is to create a ToDo List web application using Node.js,
 1. Node.js & Express.js: The application will be a web server built using Node.js and Express.js. Express.js will handle routing and middleware.
 
 2. EJS: EJS will be used as the templating engine to generate dynamic HTML based on the application's state.
+
+![image](https://github.com/Adelina122/ToDoList-App/assets/70908927/7b9d731c-8ce4-4091-9072-e38e0d0144ae)
+
