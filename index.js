@@ -69,6 +69,12 @@ app.post("/submitMain", (req, res) => {
     res.redirect("/");
 });
 
+app.post("/deleteMain", async (req, res) => {
+    const checkedTaskID = req.body.checkbox;
+    await Task.findByIdAndRemove(checkedTaskID).then(console.log("Successfully deleted checked task"));
+    res.redirect("/");
+});
+
 app.get("/work", (req, res) => {
     res.render("./work.ejs", { tasksList: workTask});
 });

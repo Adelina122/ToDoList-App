@@ -25,10 +25,14 @@
         <%# if (taskList.length >= 1) { %>
         <% taskList.forEach(task => { %>
             <label class="list-group-item d-flex gap-3">
-                <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
+
+                <form action="/deleteMain" method="post" style="margin: 0;">
+                <input class="form-check-input flex-shrink-0" type="checkbox" value="<%= task.id %>" onchange="this.form.submit()" name="checkbox" style="font-size: 1.375em; margin-right: 10px;">
                     <span class="pt-1 form-checked-content">
-                        <strong class="task"><%= task.name %></strong>
+                        <strong class="task" style="padding-top: 20px !important;"><%= task.name %></strong>
                     </span>
+                </form>
+
                 </label>
             <% }); %>
         <%# } %>
