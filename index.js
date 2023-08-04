@@ -35,11 +35,19 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", async (req, res) => {
+
     var currentDay = new Date().getDay();
     var currentDate = new Date().getDate();
     var currentMonth = new Date().getMonth();
+
     const usersTasks = await Task.find({});
-    console.log(usersTasks);
+
+    if (usersTasks == 0) {
+        await Task.insertMany(defaultTasks).then(console.log("Insert Successfully!"));
+        console.log(usersTasks, "Default tasks successfully inserted!");
+        return res.redirect("/");
+    }
+
     res.render("./index.ejs", {
         day: dayNames[currentDay],
         date: currentDate,
