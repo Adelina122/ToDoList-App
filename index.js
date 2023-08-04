@@ -58,9 +58,14 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/submitMain", (req, res) => {
-    newTask = req.body["todayList"];
-    dailyTask.push(newTask);
+    const userTask = req.body["todayList"];
+    // dailyTask.push(newTask);
     // console.log(newTask, dailyTask);
+
+    const task = new Task({
+        name: userTask
+    });
+    task.save();
     res.redirect("/");
 });
 
